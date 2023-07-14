@@ -1,0 +1,96 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    row-gap: 10px;
+    position: fixed;
+    width: 250px;
+    height: 100vh;
+    padding: 20px;
+    left: 0;
+    top: 0;
+    z-index: 1;
+    background-color:#394B41 ;
+    font-family: 'Raleway', sans-serif;
+    font-weight: bold;
+}
+form label{
+    text-transform: capitalize;
+    font-size: 1.2rem;
+    color: #0FFFAE;
+}
+
+form input{
+    padding: 5px;
+    border-radius: 9px;
+    outline: none;
+    border: 1px solid #9BB0A5;
+}
+
+form input::placeholder{
+    text-transform: capitalize;
+}
+
+form input:nth-child(9){
+    background-color: white;
+    text-transform: capitalize;
+    border: 1px solid black;
+    margin-top: 10px;
+}
+
+form input:nth-child(9):hover{
+    cursor: pointer;
+    background-color: #00A1FF;
+    color:white ;
+    transition: .4s;
+}
+
+.cards-container {
+    width: 100%;
+    margin-left: 250px;
+    padding: 20px;
+
+}
+.card-contact{
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    column-gap: 10px;
+}
+.card{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 5px;
+    width: 15%;
+    padding: 15px;
+    border: 1px solid black;
+    border-radius: 4px;
+    color: #394B41;
+    font-family: 'Ubuntu', sans-serif;
+    -webkit-box-shadow: 2px 11px 20px -14px rgba(0,0,0,0.75);
+-moz-box-shadow: 2px 11px 20px -14px rgba(0,0,0,0.75);
+box-shadow: 2px 11px 20px -14px rgba(0,0,0,0.75);
+}
+
+.nombre-contact, .apellido-contact{
+    text-transform:uppercase;
+    font-weight: bold;
+    font-size: 1.1rem;
+    
+}
+.card-footer a{
+    text-decoration: none;
+    color: #0FFFAE;
+    background-color: #394B41;
+    padding: 3px 20px;
+    border-radius: 8px;
+}

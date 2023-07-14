@@ -1,0 +1,48 @@
+
+
+<div class="card-contact">
+
+
+    <% contactos.filter(function(contacto) { %>
+
+        <div class="card">
+
+            <div class="nombre-contact">
+                <h2><%= contacto.nombre %></h2>
+            </div>
+
+            <div class="apellido-contact">
+                <h2><%= contacto.apellido %></h2>
+            </div>
+
+            <div class="direccion-contact">
+                <p><%= contacto.direccion%></p>
+            </div>
+
+            <div class="telefono-contact">
+                <p><%= contacto.telefono%></p>
+            </div>
+
+            <div class="card-footer">
+                <a href="delete/<%=contacto.id %>">
+                    Borrar
+                </a>
+            </div>
+
+
+        </div>
+
+
+
+    <% }) %>
+
+
+
+
+
+
+
+
+
+</div>
+

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <%-include("partials/meta")%>
+
+    <%-include("partials/custom")%>
+
+
+
+    <title>Contactos</title>
+
+</head>
+
+<body>
+
+    <h1>Contactos</h1>
+
+
+    <form action="index.ejs" method="POST">
+
+
+        <label for="nombre">Nombre</label><input type="text" name="nombre" placeholder="Juan">
+
+
+        <label for="apellido">apellido</label><input type="text" name="apellido" placeholder="Gonzales">
+
+
+        <label for="direccion">dirección</label><input type="text" name="direccion" placeholder="Calle 9A -8">
+
+
+        <label for="telefono">teléfono</label><input type="text" name="telefono" placeholder="341412321">
+
+        <input type="submit" value="Añadir contacto">
+    </form>
+
+    
+    <div class="cards-container">
+
+
+        <div class="card-contact">
+
+        
+
+            <% contactos.forEach(function(contacto) { %>
+    
+                <div class="card">
+        
+                    <div class="nombre-contact">
+                        <h2><%= contacto.nombre %></h2>
+                    </div>
+        
+                    <div class="apellido-contact">
+                        <h2><%= contacto.apellido %></h2>
+                    </div>
+        
+                    <div class="direccion-contact">
+                        <p><%= contacto.direccion%></p>
+                    </div>
+        
+                    <div class="telefono-contact">
+                        <p><%= contacto.telefono%></p>
+                    </div>
+        
+                    <div class="card-footer">
+                        <a href="delete/<%=contacto.id %>">
+                            Borrar
+                        </a>
+                    </div>
+        
+        
+                </div>
+        
+        
+        
+            <% }) %>
+        
+    </div>
+
+    
+
+    
+
+        
+    
+    
+   
+
+
+ 
+
+
+    
+</body>
+</html>
